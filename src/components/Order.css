@@ -1,0 +1,39 @@
+.p-listbox-item .p-highlight:hover{
+   display: inline-block;
+}
+
+.country-item :hover{
+    background-color: red;
+}
+
+
+/* 획득한 음료 */
+.cont-myitems{
+    margin-top:20px;
+    padding:25px 27px 32px;
+    background: #fff;
+}
+
+.cont-myitems .tit-myitem{
+    display: block;
+    text-align: center;
+    margin-bottom:13px;
+    font-size: 14px;
+    font-weight: 700;
+}
+.cont-myitems .list-item-staged{
+    overflow-y: scroll;
+    height:364px;
+    padding:12px 12px 0;
+    background-color: #EAE8FE;
+    border: 1px solid #BDBDBD;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.cont-myitems .txt-total{
+    display: block;
+    text-align: right;
+    font-size: 12px;
+    margin-top:10px;
+}
