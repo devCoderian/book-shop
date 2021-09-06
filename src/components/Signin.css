@@ -1,0 +1,48 @@
+.signin{
+    display: block;
+    width:50%;
+    height: 70%;
+    margin:0 auto;
+    /* position: relative; */
+}
+
+.inputWrapper {
+    position: absolute;
+    top:15%;
+    left: 40%;
+    border: 1px solid rgb(225, 225, 226);
+    background-color: rgb(241, 244, 247);
+    border-radius: 10px;
+    
+}
+.inputWrapper .inputField {
+    margin: 30px 100px 50px;
+    /* border: 1px solid grey; */
+}
+.inputWrapper .inputField h1{
+    margin-left: 30%;
+    color:rgb(53, 53, 53);
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+.inputWrapper .inputField .p-field{
+
+}
+.p-inputtext {
+    margin: 0;
+    width: 250px;
+    height: 30px;
+}
+.btn-sign{
+    margin-top: 30px;
+    width: 100%;
+    background-color: rgb(28, 40, 109);
+    color: #fff;
+    padding: 10px 0px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 5px 5px 20px rgb(107, 104, 151);
+}
+/* position: absolute;
+  left: 50%; */

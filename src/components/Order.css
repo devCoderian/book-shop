@@ -14,8 +14,8 @@
     font-weight: 700;
 }
 .cont-myitems .list-item-staged{
-    /* overflow-y: scroll; */
-    overflow: hidden;
+    overflow-y: scroll;
+    /* overflow: hidden; */
     height:364px;
     padding:12px 12px 0;
     background-color: transparent;

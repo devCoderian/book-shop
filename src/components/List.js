@@ -2,14 +2,14 @@ import React, { useState, useEffect, useContext } from 'react';
 import { DataView, DataViewLayoutOptions } from 'primereact/dataview';
 import { Button } from 'primereact/button';
 import { Dropdown } from 'primereact/dropdown';
-import { ProductService } from '../service/ProductService';
+import { ProductService } from '../service/ProductService'
 import { Rating } from 'primereact/rating';
 import './DataViewDemo.css';
 import { Tooltip } from 'primereact/tooltip';
-import { InputText } from 'primereact/inputtext';
-import AppStateContext from '../contexts/AppStateContext';
 import useProduct from '../hooks/useProduct';
 import useActions from '../hooks/useActions';
+
+
 export default function List(){
 
     const products = useProduct();
@@ -25,30 +25,7 @@ export default function List(){
         {label: 'Price Low to High', value: 'price'},
     ];
 
-    // const productService = new ProductService();
-
-    // useEffect(() => {
-    //     productService.getProducts().then(data => setProducts(data));
-    // }, []); // eslint-disable-line react-hooks/exhaustive-deps
-
-    // const onSortChange = (event) => {
-    //     const value = event.value;
-
-    //     if (value.indexOf('!') === 0) {
-    //         setSortOrder(-1);
-    //         setSortField(value.substring(1, value.length));
-    //         setSortKey(value);
-    //     }
-    //     else {
-    //         setSortOrder(1);
-    //         setSortField(value);
-    //         setSortKey(value);
-    //     }
-    // }
-
-    // const onClick = () =>{
-    //     addToOrder(data.id);
-    // }
+ 
     const renderGridItem = (data) => {
         return (
             <div className="p-col-12 p-md-4">

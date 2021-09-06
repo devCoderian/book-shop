@@ -1,4 +1,4 @@
-export class ProductService {
+export default class ProductService {
 
 
     getProductsSmall() {

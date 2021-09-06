@@ -26,6 +26,7 @@ export default function Order(){
     if(orders.length === 0){
         return (
             <>
+             <div className="p-d-flex p-ai-end" >
             <div className="cont-myitems">
             <strong className="tit-myitem">장바구니</strong>
             <ul className="list-item-staged">
@@ -34,11 +35,13 @@ export default function Order(){
                 </li>
             </ul>
             </div>
+            </div>
         </>
         )
     }else{
     return (
         <>
+        <div className="p-d-flex p-ai-end" >
         <div className="cont-myitems">
         <strong className="tit-myitem">장바구니</strong>
         <ul className="list-item-staged">
@@ -66,6 +69,7 @@ export default function Order(){
         <button onClick={
             ()=>{alert('주문서 만들기,검색기능 구현하기')}
         } style ={{"width":"100%"}}>주문</button>
+        </div>
         </div>
     </>
     )

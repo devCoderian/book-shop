@@ -1,29 +1,28 @@
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import List from "./components/List";
-import Order from "./components/Order";
 import 'primereact/resources/themes/mdc-light-indigo/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 import 'primeflex/primeflex.css';
 import AppStateProvider from "./providers/AppStateProvider";
-
+import {Route, BrowserRouter} from 'react-router-dom';
+import Contents from "./components/Contents";
+import Signin from "./components/Signin";
+import Cart from "./components/Cart";
+import NotFound from "./components/NotFound";
 function App() {
   return (
    <>
+   <BrowserRouter>
     <AppStateProvider>
-    <Header />
-    <div className="p-d-flex p-ai-start">
-    {/* <div className="p-mr-2" > */}
-        <List />
-        
-        <div className="p-d-flex p-ai-end" >
-       <Order />
-       </div>
-     </div>
-     <Footer />
+      <Header />
+      <Route exact path ='/cart' component ={Cart} />
+      <Route exact path ='/signin' component ={Signin} />
+      <Route exact path ='/' component ={Contents} />
+      <Route path={"*"} component ={NotFound} />
+      <Footer />
      </AppStateProvider>
-
+    </BrowserRouter>
    </>
   );
 }

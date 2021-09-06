@@ -1,6 +1,6 @@
 import { useState, useCallback, useEffect } from "react";
 import AppStateContext from "../contexts/AppStateContext";
-import { ProductService } from "../service/ProductService";
+import  ProductService  from "../service/ProductService";
 
 const AppStateProvider = ({children}) =>{
     const [products, setProducts] = useState([]);
