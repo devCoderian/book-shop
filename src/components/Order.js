@@ -8,7 +8,7 @@ import useActions from '../hooks/useActions';
 export default function Order(){
     const orders = useOrder();
     const products = useProduct();
-    const {remove} = useActions();
+    const {remove, removeAll} = useActions();
     console.log(orders);
     let total = 0;
 
@@ -62,7 +62,10 @@ export default function Order(){
         </ul>
       
         <strong className="txt-total">총금액 :${cal}</strong>
-        {/* <button onClick>비우기</button> */}
+        <button onClick={removeAll}>비우기</button>
+        <button onClick={
+            ()=>{alert('주문서 만들기,검색기능 구현하기')}
+        } style ={{"width":"100%"}}>주문</button>
         </div>
     </>
     )
