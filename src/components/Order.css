@@ -1,17 +1,9 @@
-.p-listbox-item .p-highlight:hover{
-   display: inline-block;
-}
-
-.country-item :hover{
-    background-color: red;
-}
-
-
 /* 획득한 음료 */
 .cont-myitems{
     margin-top:20px;
     padding:25px 27px 32px;
     background: #fff;
+    width: 450px;
 }
 
 .cont-myitems .tit-myitem{
@@ -22,13 +14,20 @@
     font-weight: 700;
 }
 .cont-myitems .list-item-staged{
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
+    overflow: hidden;
     height:364px;
     padding:12px 12px 0;
-    background-color: #EAE8FE;
-    border: 1px solid #BDBDBD;
+    background-color: transparent;
+    border: 1px solid #dee2e6;
     box-sizing: border-box;
-    border-radius: 5px;
+    border-radius: 2px;
+    color:#000;
+}
+.cont-myitems .img-item{
+    width: 50px;
+    object-fit: cover;
+    display: inline-block;
 }
 
 .cont-myitems .txt-total{
@@ -37,3 +36,5 @@
     font-size: 12px;
     margin-top:10px;
 }
+
+/* 3F51B5 */

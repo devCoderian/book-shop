@@ -3,6 +3,7 @@
 .orderlist-demo{
     /* 간격주기 */
     margin: 30px;
+    /* width: 1000px; */
 }
 .orderlist-demo .p-orderlist-controls{
     display: none;

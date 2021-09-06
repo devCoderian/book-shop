@@ -2,15 +2,21 @@ export class ProductService {
 
 
     getProductsSmall() {
-        return fetch('data/products-small.json').then(res => res.json()).then(d => d.data);
+        return fetch('https://fakestoreapi.com/products/')
+        .then(res=>res.json())
+        .then(json=>json)
     }
-
+    
     getProducts() {
-        return fetch('data/products.json').then(res => res.json()).then(d => d.data);
+        return fetch('https://fakestoreapi.com/products/')
+        .then(res=>res.json())
+        .then(json=>json)
     }
 
     getProductsWithOrdersSmall() {
-        return fetch('data/products-orders-small.json').then(res => res.json()).then(d => d.data);
+        return fetch('https://fakestoreapi.com/products/')
+        .then(res=>res.json())
+        .then(json=>json)
     }
   
 }

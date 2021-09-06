@@ -6,22 +6,23 @@ import 'primereact/resources/themes/mdc-light-indigo/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 import 'primeflex/primeflex.css';
+import AppStateProvider from "./providers/AppStateProvider";
 
 function App() {
   return (
    <>
-
+    <AppStateProvider>
     <Header />
     <div className="p-d-flex p-ai-start">
-    <div className="p-mr-2" >
+    {/* <div className="p-mr-2" > */}
         <List />
-        </div>
-      <div className="p-mr-2"  style={{width: '700px'}}>
+        
+        <div className="p-d-flex p-ai-end" >
        <Order />
        </div>
      </div>
      <Footer />
-  
+     </AppStateProvider>
 
    </>
   );
