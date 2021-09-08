@@ -13,7 +13,7 @@ export default function Header(){
     const end = <InputText placeholder="Search" type="text" />;
     return (
         <>
-              <Menubar model={items} end={end} />
+              <Menubar model={items} />
          </>
     );
     

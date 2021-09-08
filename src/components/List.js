@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext, useLayoutEffect } from 'react';
 import { DataView, DataViewLayoutOptions } from 'primereact/dataview';
 import { Button } from 'primereact/button';
 import { Dropdown } from 'primereact/dropdown';
@@ -8,24 +8,20 @@ import './DataViewDemo.css';
 import { Tooltip } from 'primereact/tooltip';
 import useProduct from '../hooks/useProduct';
 import useActions from '../hooks/useActions';
+import { InputText } from 'primereact/inputtext';
 
 
 export default function List(){
 
-    const products = useProduct();
+    let products = useProduct();
     // const {products} = useContext(AppStateContext);
     // const [products, setProducts] = useState(null);
-    const {addToOrder, remove, removeAll} = useActions();
-    const [layout, setLayout] = useState('grid');
-    const [sortKey, setSortKey] = useState(null);
-    const [sortOrder, setSortOrder] = useState(null);
-    const [sortField, setSortField] = useState(null);
-    const sortOptions = [
-        {label: 'Price High to Low', value: '!price'},
-        {label: 'Price Low to High', value: 'price'},
-    ];
-
- 
+    const {addToOrder, remove, removeAll, searchValue} = useActions();
+    // cosnt [searchValue, setSearchList ] =useState(null);
+    // const [search, setSearch] = useState(null);
+    
+    let productsCopy = [];
+  
     const renderGridItem = (data) => {
         return (
             <div className="p-col-12 p-md-4">
@@ -56,38 +52,20 @@ export default function List(){
         );
     }
 
-    // const itemTemplate = (product, layout) => {
-    //     if (!product) {
-    //         return;
-    //     }
-
-    //     if (layout === 'list')
-    //         return renderListItem(product);
-    //     else if (layout === 'grid')
-    //         return renderGridItem(product);
-    // }
-
-    // const renderHeader = () => {
-    //     return (
-    //         <div className="p-grid p-nogutter">
-    //             <div className="p-col-6" style={{textAlign: 'left'}}>
-    //                 <Dropdown options={sortOptions} value={sortKey} optionLabel="label" placeholder="Sort By Price" onChange={onSortChange}/>
-    //             </div>
-    //             <div className="p-col-6" style={{textAlign: 'right'}}>
-    //                 <DataViewLayoutOptions layout={layout} onChange={(e) => setLayout(e.value)} />
-    //             </div>
-    //         </div>
-    //     );
-    // }
 
 
        const renderHeader = () => {
         return (
             <div className="p-grid p-nogutter"style={{height:'58px'}}>
-                <div className="p-col-6" style={{textAlign: 'left', margin: '15px', fontWeight:'700', fontSize:'1.5em'}}>
-                상품 리스트
-                </div>
+                
+                <span className = "title">상품 리스트 </span>
+                <input className="list-serach" placeholder="Search" type="text" 
+                  onChange={(e) => searchValue(e)} />
+                  {/* onChange={(e) => searchValue(e)}  */}
+                 {/* <button onClick ={(e) => searchValue(e)}>검색</button> */}
               
+              
+             
             </div>
         );
     }
@@ -95,12 +73,13 @@ export default function List(){
     const header = renderHeader();
 
     return (
+        
         <div className="dataview-demo">
             <div className="card">
-                <DataView value={products} layout={layout} header = {header}
+                <DataView value={products}  header = {header}
                         itemTemplate={renderGridItem} paginator rows={9}
-                        sortOrder={sortOrder} sortField={sortField} />
+                       />
             </div>
         </div>
     );
-}
+    }

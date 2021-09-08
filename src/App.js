@@ -16,8 +16,8 @@ function App() {
    <BrowserRouter>
     <AppStateProvider>
       <Header />
-      <Route exact path ='/cart' component ={Cart} />
-      <Route exact path ='/signin' component ={Signin} />
+      {/* <Route exact path ='/cart' component ={Cart} /> */}
+      {/* <Route exact path ='/signin' component ={Signin} /> */}
       <Route exact path ='/' component ={Contents} />
       <Route path={"*"} component ={NotFound} />
       <Footer />

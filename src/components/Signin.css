@@ -3,7 +3,7 @@
     width:50%;
     height: 70%;
     margin:0 auto;
-    /* position: relative; */
+    
 }
 
 .inputWrapper {
@@ -17,7 +17,7 @@
 }
 .inputWrapper .inputField {
     margin: 30px 100px 50px;
-    /* border: 1px solid grey; */
+  
 }
 .inputWrapper .inputField h1{
     margin-left: 30%;
@@ -29,7 +29,8 @@
 
 }
 .p-inputtext {
-    margin: 0;
+    margin-left: 300px;
+    margin-top:15px;
     width: 250px;
     height: 30px;
 }
@@ -42,7 +43,6 @@
     border: none;
     border-radius: 3px;
     cursor: pointer;
-    box-shadow: 5px 5px 20px rgb(107, 104, 151);
+    /* box-shadow: 2px 2px 20px rgb(107, 104, 151); */
 }
-/* position: absolute;
-  left: 50%; */
+
