@@ -42,6 +42,7 @@ export default function Order(){
     return (
         <>
         <div className="p-d-flex p-ai-end" >
+        {/* <div className ="my-info"> */}
         <div className="cont-myitems">
         <strong className="tit-myitem">장바구니</strong>
         <ul className="list-item-staged">
@@ -50,14 +51,19 @@ export default function Order(){
                 return(
                 
                 <li key = {index}>
-                <img src={product.image} alt="" className="img-item" />
-                <strong className="txt-item">{product.title}</strong>
-                <span className="num-counter"> x {order.quantity}</span>
-                <span className="num-counter"> $ {product.price*order.quantity}</span>
-                <span className="num-counter"><button onClick = {()=> remove(order.id) }>
-                    <i className="pi pi-minus-circle"></i>
-                    </button>
+                <span className="num-counter">
+                {/* <button onClick = {()=> remove(order.id) }> */}
+                    <i className="pi pi-minus-circle" onClick = {()=> remove(order.id) }></i>
+                    {/* </button> */}
                 </span>
+                <img src={product.image} alt="" className="img-item" />
+                <strong className="txt-item p-text-nowrap p-text-truncate" style={{width: '10rem'}}>{product.title}</strong>
+                <span className="num-counter"> x {order.quantity}</span>
+                {/* <span className="num-counter"> ${product.price*order.quantity}</span> */}
+                {/* <span className="num-counter"><button onClick = {()=> remove(order.id) }>
+                    <i className="pi pi-minus-circle" onClick = {()=> remove(order.id) }></i>
+                    </button>
+                </span> */}
                 </li>
                 )
             })
@@ -65,12 +71,17 @@ export default function Order(){
         </ul>
       
         <strong className="txt-total">총금액 :${cal}</strong>
-        <button onClick={removeAll}>비우기</button>
+        
+        {/* <button onClick={removeAll}>비우기</button> */}
+        <div className="btn-div">
+        <button onClick={removeAll} style ={{"width":"100%"}}>비우기</button>
         <button onClick={
             ()=>{alert('주문서 만들기,검색기능 구현하기')}
         } style ={{"width":"100%"}}>주문</button>
         </div>
         </div>
+        </div>
+        {/* </div> */}
     </>
     )
     }

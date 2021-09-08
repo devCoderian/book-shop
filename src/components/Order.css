@@ -1,9 +1,20 @@
 /* 획득한 음료 */
-.cont-myitems{
+/* .my-info .cont-myitems{
+    margin-top:20px;
+    padding:25px 27px 32px;
+    background: #fff;
+} */
+.my-info{
+    width: 450px;
+    background: #3F51B5;
+    box-sizing: border-box;
+}
+ .cont-myitems{
     margin-top:20px;
     padding:25px 27px 32px;
     background: #fff;
     width: 450px;
+    box-sizing: border-box;
 }
 
 .cont-myitems .tit-myitem{
@@ -12,6 +23,7 @@
     margin-bottom:13px;
     font-size: 14px;
     font-weight: 700;
+    
 }
 .cont-myitems .list-item-staged{
     overflow-y: scroll;
@@ -19,16 +31,28 @@
     height:364px;
     padding:12px 12px 0;
     background-color: transparent;
-    border: 1px solid #dee2e6;
+    border: 1px solid #a9aab1;
     box-sizing: border-box;
     border-radius: 2px;
     color:#000;
+    background: #d4dbff;
+}
+.list-item-staged li+li {
+    margin-top: 6px;
+}
+.list-item-staged li {
+    overflow: hidden;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-sizing: border-box;
 }
 .cont-myitems .img-item{
     width: 50px;
     object-fit: cover;
     display: inline-block;
 }
+
 
 .cont-myitems .txt-total{
     display: block;
@@ -38,3 +62,75 @@
 }
 
 /* 3F51B5 */
+.list-item-staged li{
+    overflow: hidden;
+    padding:8px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+.list-item-staged li+li{
+    margin-top:6px;
+}
+.list-item-staged .img-item, .list-item-staged .txt-item{
+    float:left;
+}
+.list-item-staged .img-item{
+    width:18px;
+    height:33px;
+}
+.list-item-staged .txt-item{
+    margin-left:10px;
+    line-height: 33px;
+    font-size:9px;
+}
+.list-item-staged .num-counter{
+    display: flex;
+    float:right;
+    width:40px;
+    height:30px;
+    border: 1px solid #BDBDBD;
+    box-sizing: border-box;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+/* .list-item-staged .num-counter{
+    display: flex;
+    float:right;
+    width:30px;
+    height:30px;
+    border: 1px solid #BDBDBD;
+    box-sizing: border-box;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+} */
+.pi{
+    cursor: pointer;
+}
+.btn-div{
+    display: flex;
+}
+
+button{
+    color: #ffffff;
+    background: #3F51B5;
+    border: 0 none;
+    padding: 0.571rem 0.75rem;
+    font-size: 1rem;
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s, box-shadow 0.2s, background-size 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+    border-radius: 4px;
+    margin: 10px;
+    /* margin: 0;
+    display: inline-flex; */
+    cursor: pointer;
+    /* -webkit-user-select: none;
+    user-select: none;
+    align-items: center;
+    vertical-align: bottom;
+    text-align: center;
+    overflow: hidden;
+    position: relative; */
+}

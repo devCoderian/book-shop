@@ -59,7 +59,7 @@ export default function List(){
             <div className="p-grid p-nogutter"style={{height:'58px'}}>
                 
                 <span className = "title">상품 리스트 </span>
-                <input className="list-serach" placeholder="Search" type="text" 
+                <input className="list-serach" style={{paddingLeft:"10px"}} placeholder="검색" type="text" 
                   onChange={(e) => searchValue(e)} />
                   {/* onChange={(e) => searchValue(e)}  */}
                  {/* <button onClick ={(e) => searchValue(e)}>검색</button> */}
