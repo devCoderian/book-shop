@@ -9,7 +9,7 @@ import { Tooltip } from 'primereact/tooltip';
 import useProduct from '../hooks/useProduct';
 import useActions from '../hooks/useActions';
 import { InputText } from 'primereact/inputtext';
-
+import { ProgressSpinner } from 'primereact/progressspinner';
 
 export default function List(){
 
@@ -73,7 +73,6 @@ export default function List(){
     const header = renderHeader();
 
     return (
-        
         <div className="dataview-demo">
             <div className="card">
                 <DataView value={products}  header = {header}

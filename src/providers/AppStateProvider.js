@@ -1,15 +1,29 @@
 import { useState, useCallback, useEffect } from "react";
 import AppStateContext from "../contexts/AppStateContext";
 import  ProductService  from "../service/ProductService";
+import { ProgressSpinner } from 'primereact/progressspinner';
 
 const AppStateProvider = ({children}) =>{
     const [products, setProducts] = useState([]);
     const [orders, setOrders] = useState([]);
     const [search, setSearch] = useState("");
     const productService = new ProductService();
-
+    const [isLoading, setIsLoading] = useState(false);
     useEffect(() => {
-        productService.getProducts().then(data => setProducts(data));
+        // getProducts() {
+        //     return fetch('https://fakestoreapi.com/products/')
+        //     .then(res=>res.json())
+        //     .then(json=>json)
+        // }
+        setIsLoading(true);
+        fetch('https://fakestoreapi.com/products/')
+            .then(res=>res.json())
+            .then(json=>json)
+            .then(setIsLoading(false));
+        
+        // productService.getProducts().then(data => {
+        //     setProducts(data);
+        // });
     }, []);
 
     useEffect(() => {
@@ -70,7 +84,11 @@ const AppStateProvider = ({children}) =>{
     )
     const removeAll = useCallback(() => {
         setOrders([]);
-    },[])
+    },[]);
+
+    // const isLoading = useCallback(() => {
+    //     setOrders([]);
+    // },[])
 
     return <AppStateContext.Provider 
     value = {{
@@ -80,7 +98,8 @@ const AppStateProvider = ({children}) =>{
         addToOrder,
         remove,
         removeAll,
-        searchValue
+        searchValue,
+        isLoading
     }}>
         {children}
     </AppStateContext.Provider>
