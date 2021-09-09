@@ -75,7 +75,7 @@ export default function Order(){
         <div className="btn-div">
         <button onClick={removeAll} style ={{"width":"100%"}}>비우기</button>
         <button onClick={
-            ()=>{alert('주문이 완료되었습니다.')}
+            ()=>{alert(`주문이 완료되었습니다. 총금액: $${cal}` )}
         } style ={{"width":"100%"}}>주문</button>
         </div>
         </div>
