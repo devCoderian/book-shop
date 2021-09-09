@@ -19,7 +19,7 @@ function App() {
       {/* <Route exact path ='/cart' component ={Cart} /> */}
       {/* <Route exact path ='/signin' component ={Signin} /> */}
       <Route exact path ='/' component ={Contents} />
-      <Route path={"*"} component ={NotFound} />
+      {/* <Route path={"*"} component ={NotFound} /> */}
       <Footer />
      </AppStateProvider>
     </BrowserRouter>

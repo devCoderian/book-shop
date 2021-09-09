@@ -10,7 +10,6 @@ export default function Order(){
     const products = useProduct();
     const {remove, removeAll} = useActions();
     console.log(orders);
-    let total = 0;
 
   
     const cal = useMemo(() =>{
@@ -19,7 +18,7 @@ export default function Order(){
             const { id, quantity } = order;
             const product = products.find(item => item.id === id)
             console.log(quantity*product.price);
-            return quantity*product.price;
+            return quantity*(product.price.toFixed(2));
         }).reduce((l, r)=> l+r, 0);
     },[orders, products]);
 
@@ -76,7 +75,7 @@ export default function Order(){
         <div className="btn-div">
         <button onClick={removeAll} style ={{"width":"100%"}}>비우기</button>
         <button onClick={
-            ()=>{alert('주문서 만들기,검색기능 구현하기')}
+            ()=>{alert('주문이 완료되었습니다.')}
         } style ={{"width":"100%"}}>주문</button>
         </div>
         </div>
@@ -86,16 +85,4 @@ export default function Order(){
     )
     }
 }
-                 
-{/* <div class="cont-myitems">
-<strong class="tit-myitem">장바구니</strong>
-<ul class="list-item-staged">
-    <li>
-        <img src="./src/images/Cool_Cola.png" alt="" class="img-item" />
-        <strong class="txt-item">BLUEBAND</strong>
-        <span class="num-counter">1</span>
-    </li>
-</ul>
-<strong class="txt-total">총금액 : (나중에 달러 변환)원</strong>
-<button onClick>비우기</button>
-</div> */}
+   

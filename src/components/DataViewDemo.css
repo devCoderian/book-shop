@@ -1,7 +1,8 @@
 
 /* DataViewDemo.css */
 .dataview-demo{
-    max-width: 80%;
+    min-width: 70%;
+    /* max-width: 80%; */
 }
 .dataview-demo .p-dropdown {
     width: 14rem;

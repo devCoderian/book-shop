@@ -8,22 +8,12 @@ const AppStateProvider = ({children}) =>{
     const [orders, setOrders] = useState([]);
     const [search, setSearch] = useState("");
     const productService = new ProductService();
-    const [isLoading, setIsLoading] = useState(false);
     useEffect(() => {
-        // getProducts() {
-        //     return fetch('https://fakestoreapi.com/products/')
-        //     .then(res=>res.json())
-        //     .then(json=>json)
-        // }
-        setIsLoading(true);
+      
         fetch('https://fakestoreapi.com/products/')
             .then(res=>res.json())
-            .then(json=>json)
-            .then(setIsLoading(false));
-        
-        // productService.getProducts().then(data => {
-        //     setProducts(data);
-        // });
+            .then(json=>json);
+       
     }, []);
 
     useEffect(() => {
@@ -98,8 +88,7 @@ const AppStateProvider = ({children}) =>{
         addToOrder,
         remove,
         removeAll,
-        searchValue,
-        isLoading
+        searchValue
     }}>
         {children}
     </AppStateContext.Provider>

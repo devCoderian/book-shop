@@ -4,9 +4,9 @@ import { ProgressSpinner } from 'primereact/progressspinner';
 import useProduct from "../hooks/useProduct";
 
 export default function Contents(){
+    
     let products = useProduct();
-    // const isLoding = useLoading();
-    //products.length===0
+
     if(products.length===0){
         return (
         <>
