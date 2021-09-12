@@ -7,9 +7,6 @@ import 'primeflex/primeflex.css';
 import AppStateProvider from "./providers/AppStateProvider";
 import {Route, BrowserRouter} from 'react-router-dom';
 import Contents from "./components/Contents";
-import Signin from "./components/Signin";
-import Cart from "./components/Cart";
-import NotFound from "./components/NotFound";
 function App() {
   return (
    <>

@@ -1,16 +1,11 @@
 import React, { useState, useEffect, useContext, useLayoutEffect } from 'react';
 import { DataView, DataViewLayoutOptions } from 'primereact/dataview';
 import { Button } from 'primereact/button';
-import { Dropdown } from 'primereact/dropdown';
-import { ProductService } from '../service/ProductService'
-import { Rating } from 'primereact/rating';
-import './DataViewDemo.css';
 import { Tooltip } from 'primereact/tooltip';
 import useProduct from '../hooks/useProduct';
 import useActions from '../hooks/useActions';
-import { InputText } from 'primereact/inputtext';
-import { ProgressSpinner } from 'primereact/progressspinner';
-
+// import './DataViewDemo.css';
+import '../CSS/DataViewDemo.css';
 export default function List(){
 
     let products = useProduct();
