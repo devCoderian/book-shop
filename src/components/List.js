@@ -37,8 +37,6 @@ export default function List(){
         );
     }
 
-
-
        const renderHeader = () => {
         return (
             <div className="p-grid p-nogutter"style={{height:'58px'}}>

@@ -9,7 +9,6 @@ export default function Order(){
     const orders = useOrder();
     const products = useProduct();
     const {remove, removeAll} = useActions();
-
   
     const cal = useMemo(() =>{
 

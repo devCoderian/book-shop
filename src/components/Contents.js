@@ -18,10 +18,12 @@ export default function Contents(){
         </>
         )
     }else{
-    return  <>
-    <div className="p-d-flex p-ai-start">
-        <List/><Order/></div>
-    </>;
+        return ( 
+        <>
+        <div className="p-d-flex p-ai-start">
+            <List/><Order/></div>
+        </>
+        );
     }
 
 };
