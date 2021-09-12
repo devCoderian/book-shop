@@ -1,11 +1,11 @@
+import './CSS/DataViewDemo.css';
 import React, { useState, useEffect, useContext, useLayoutEffect } from 'react';
 import { DataView, DataViewLayoutOptions } from 'primereact/dataview';
 import { Button } from 'primereact/button';
 import { Tooltip } from 'primereact/tooltip';
 import useProduct from '../hooks/useProduct';
 import useActions from '../hooks/useActions';
-// import './DataViewDemo.css';
-import '../CSS/DataViewDemo.css';
+
 export default function List(){
 
     let products = useProduct();
