@@ -1,7 +1,6 @@
 # 쇼핑 카트 시스템
 본 프로젝트는 FAKE API로 통신하는 react로 이루어진 쇼핑 카트 포트폴리오 입니다. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## To use this application
 
